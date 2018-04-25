@@ -16,12 +16,14 @@ var blogSchema = new mongoose.Schema({
   body: {String},
   created: {type: Date, default: Date.now}
 });
-// var Blog = mongoose.model("Blog", blogSchema);
+var Blog = mongoose.model("Blog", blogSchema);
+
 // Blog.create({
 //   title: "Test Blog",
 //   image: "https://images.unsplash.com/photo-1465915147858-4a9762d4ff68?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5dd96b113b2b58309989e3820d046095&auto=format&fit=crop&w=1050&q=80",
 //   body: "Hello this is a test blog"
 // });
+
 // RESTFUL ROUTES
 app.get("/", function(req,res){
   res.redirect("/blogs");
