@@ -1,4 +1,15 @@
+
+<% include partials/header %>
 <h1>Blogs page</h1>
+
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <div class="header item"> <i class="code icon"></i>Blog Site</div>
+    <a href="/" class="item">HOME</a>
+    <a href="/blogs/new" class="item">Add Post</a>
+  </div>
+</div>
+
 <% blogs.forEach(function(blog){ %>
   <div>
     <h2><%= blog.title %></h2>
@@ -7,3 +18,4 @@
     <p><%= blog.created %></p>
   </div>
 <% }) %>
+<% include partials/footer %>

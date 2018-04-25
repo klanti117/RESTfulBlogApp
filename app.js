@@ -37,6 +37,9 @@ app.get("/blogs", function(req,res){
     }
   });
 });
+app.get("/blogs/new", function(req,res){
+  res.send("Create a new blog post");
+});
 
 app.listen(3000, function(){
   console.log("blog server started ....");
