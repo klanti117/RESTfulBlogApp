@@ -3,8 +3,20 @@
 
 <div class= "ui main text container segment">
   <div class="ui huge header">New Blog</div>
+  <form class="ui form" action="/blogs" method="POST">
+    <div class="field">
+      <label class="ui teal tag  label">Title</label>
+      <input type="text" name="blog[title]" placeholder="title">
+    </div>
+    <div class="field">
+      <label class="ui teal tag  label">Images</label>
+      <input type="text" name="blog[image]" placeholder="image">
+    </div>
+    <div class="field">
+      <label class="ui teal tag  label">Blog Content</label>
+      <textarea name="blog[body]"></textarea>
+    </div>
+      <input type="submit" class="ui inverted red button big">
+  </form>
 </div>
-
-
-
 <% include partials/footer %>
