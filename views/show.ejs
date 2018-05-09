@@ -1,11 +1,17 @@
 <% include partials/header %>
 <% include partials/navbar %>
-<div class= "ui main text container segment">
-  <div class="ui huge header">
-    <%= blog.title %>
-    <img src="<%= blog.image %>">
-    <span> <%= blog.created %></span>
-    <p><%= blog.body %></p>
+<div class= "ui main text container">
+  <div class="ui huge header"><%= blog.title %></div>
+  <div class="ui top attached segment">
+    <div class="item">
+      <img class="ui centred rounded image" src="<%= blog.image %>">
+    </div>
+    <div class="content">
+      <span> <%= blog.created.toDateString() %></span>
+    </div>
+    <div class="description">
+      <p><%- blog.body %></p>
+    </div>
   </div>
 </div>
 <% include partials/footer %>

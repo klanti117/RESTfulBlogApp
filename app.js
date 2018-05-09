@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 var blogSchema = new mongoose.Schema({
   title: String,
   image: {type: String, default: "placeholderimage.jpg"},
-  body: {String},
+  body: String,
   created: {type: Date, default: Date.now}
 });
 var Blog = mongoose.model("Blog", blogSchema);
