@@ -1,4 +1,3 @@
-
 <% include partials/header %>
 <% include partials/navbar %>
 <div class= "ui main container">
@@ -8,7 +7,8 @@
       <h2><%= blog.title %></h2>
       <img src="<%= blog.image %>">
       <span> <%= blog.created %></span>
-      <p><%= blog.created %></p>
+      <p><%= blog.body %></p>
+      <a href="/blogs/<%= blog._id %>">Read More</a>
     </div>
   <% }) %>
 </div>
