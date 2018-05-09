@@ -1,0 +1,11 @@
+<% include partials/header %>
+<% include partials/navbar %>
+<div class= "ui main text container segment">
+  <div class="ui huge header">
+    <%= blog.title %>
+    <img src="<%= blog.image %>">
+    <span> <%= blog.created %></span>
+    <p><%= blog.body %></p>
+  </div>
+</div>
+<% include partials/footer %>
