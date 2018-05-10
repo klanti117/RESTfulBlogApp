@@ -80,13 +80,25 @@ app.get("/blogs/:id/edit",function(req, res){
 app.put("/blogs/:id", function(req,res){
   console.log("Title : " + req.body.blog.title + "\nImage URL : " + req.body.blog.image + "\nDescription : " + req.body.blog.body + "\n");
   Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, blog){
-  if(err){
-    console.log(err);
-    res.redirect("/blogs");
-  }else{
-    var showUrl = "/blogs/" + blog._id;
-    res.redirect(showUrl);
-  }
+    if(err){
+      console.log(err);
+      res.redirect("/blogs");
+    }else{
+      var showUrl = "/blogs/" + blog._id;
+      res.redirect(showUrl);
+    }
+  });
+});
+// DELETE ROUTES
+app.delete("/blogs/:id", function(req, res){
+  //delete blogs
+  Blog.findByIdAndRemove(req.params.id, function(err){
+    if(err){
+      console.log(err);
+      res.redirect("/blogs");
+    }else{
+      res.redirect("/blogs");
+    }
   });
 });
 //LISTEN

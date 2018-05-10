@@ -7,3 +7,6 @@ i.icon{
 .tag{
   width: 20%;
 }
+#delete{
+  display: inline;
+}
